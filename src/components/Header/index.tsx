@@ -39,7 +39,7 @@ import {
 import navItems, { type NavItemDef } from './navItems';
 import { HEADER_CONTENT } from '@/utils';
 import { usePathname } from 'next/navigation';
-import { HeaderLogo, SocialLinks, Map } from "@/shared-components";
+import { HeaderLogo, SocialLinks, Map } from "@/components";
 import Image from 'next/image';
 
 

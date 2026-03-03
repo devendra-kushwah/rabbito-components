@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '@/theme/styles/breakpoints';
+import { media } from '@/styles/breakpoints';
 
 export const StyledSection = styled.section<{ spacing?: string, background?: string }>`
     padding: ${({ spacing }) => spacing || ""};

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import { Layout, Col, Button, Menu, Row } from 'antd';
-import { media } from '@/theme/styles/breakpoints';
+import { media } from '@/styles/breakpoints';
 
 export const BlueTopBar = styled.div`
   color: #fff;

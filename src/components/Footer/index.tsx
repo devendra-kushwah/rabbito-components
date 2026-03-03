@@ -3,7 +3,7 @@ import React from "react";
 import { Row, Col } from 'antd';
 import Link from "next/link";
 import { FooterWrapper } from "./style";
-import { FooterLogo, SocialLinks, WhatsAppChat } from "@/shared-components";
+import { FooterLogo, SocialLinks, WhatsAppChat } from "@/components";
 import { carServices } from '@/utils/cms/carServices';
 
 const Footer: React.FC = () => {
