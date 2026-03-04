@@ -21,9 +21,6 @@
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
     "antd": "^6.3.0",
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
     "styled-components": "^6.3.11"
   },
   "peerDependencies": {
@@ -32,6 +29,7 @@
     "antd": "^6"
   },
   "devDependencies": {
+    "next": "16.1.6",
     "@chromatic-com/storybook": "^5.0.1",
     "@storybook/addon-a11y": "^10.2.11",
     "@storybook/addon-docs": "^10.2.11",
