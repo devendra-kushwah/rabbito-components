@@ -17,4 +17,7 @@ export { default as InstagramFeed } from "./InstagramFeed";
 export { default as Map } from "./Map";
 export { default as Video } from "./Video";
 export { default as Gallery } from "./Gallery";
+export { default as Navigation } from "./Navigation";
+export { default as MainLayout } from "./MainLayout";
+
 
