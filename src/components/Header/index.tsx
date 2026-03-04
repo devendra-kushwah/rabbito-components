@@ -37,6 +37,7 @@ import {
     MenuStyled
 } from './header.style';
 import navItems, { type NavItemDef } from './navItems';
+import type { MenuProps } from 'antd';
 import { HEADER_CONTENT } from '@/utils';
 import { usePathname } from 'next/navigation';
 import { HeaderLogo, SocialLinks, Map } from "@/components";
@@ -47,6 +48,13 @@ const MainHeader: React.FC = () => {
     const pathname = usePathname();
     const [selectedKey, setSelectedKey] = useState<string>('home');
     const [drawerVisible, setDrawerVisible] = useState<boolean>(false);
+
+    // Convert navItems into the shape expected by antd Menu once
+    const menuItems: MenuProps['items'] = navItems.map((it) => ({
+        key: it.key,
+        label: it.label,
+        icon: it.icon,
+    }));
 
     const handleMenuClick = ({ key }: { key: string }) => {
         setSelectedKey(key);
@@ -143,7 +151,7 @@ const MainHeader: React.FC = () => {
                             mode="horizontal"
                             theme="dark"
                             selectedKeys={[selectedKey]}
-                            items={(navItems as NavItemDef[])}
+                            items={menuItems}
                             onClick={({ key }) => setSelectedKey(key as string)}
                         />
                     </Col>
@@ -170,7 +178,7 @@ const MainHeader: React.FC = () => {
                         <Menu
                             mode="vertical"
                             selectedKeys={[selectedKey]}
-                            items={(navItems as NavItemDef[])}
+                            items={menuItems}
                             onClick={(info) => {
                                 handleMenuClick(info);
                                 closeDrawer();
