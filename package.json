@@ -1,14 +1,22 @@
 {
-  "name": "work",
+  "name": "rabbito-component",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+  "build:lib": "tsup src/index.ts --format cjs,esm --dts --out-dir dist --clean --tsconfig tsconfig.build.json",
+    "prepare": "npm run build:lib"
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
@@ -17,6 +25,11 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "styled-components": "^6.3.11"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19",
+    "antd": "^6"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.0.1",
