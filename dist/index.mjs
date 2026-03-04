@@ -20,7 +20,7 @@ import {
   WhatsAppChat_default,
   footer_default,
   header_default
-} from "./chunk-E42TVIX2.mjs";
+} from "./chunk-ELXVPUF3.mjs";
 export {
   AlertBanner_default as AlertBanner,
   Banner_default as Banner,
