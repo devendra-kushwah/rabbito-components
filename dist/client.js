@@ -22,7 +22,9 @@
 
 
 
-var _chunkQKLZ373Wjs = require('./chunk-QKLZ373W.js');
+
+
+var _chunkVZ74AM2Ijs = require('./chunk-VZ74AM2I.js');
 
 
 
@@ -46,4 +48,6 @@ var _chunkQKLZ373Wjs = require('./chunk-QKLZ373W.js');
 
 
 
-exports.AlertBanner = _chunkQKLZ373Wjs.AlertBanner_default; exports.Banner = _chunkQKLZ373Wjs.Banner_default; exports.BaseCard = _chunkQKLZ373Wjs.BaseCard_default; exports.DataTable = _chunkQKLZ373Wjs.DataTable; exports.DetailedCard = _chunkQKLZ373Wjs.DetailedCard_default; exports.Footer = _chunkQKLZ373Wjs.Footer_default; exports.FooterLogo = _chunkQKLZ373Wjs.footer_default; exports.Gallery = _chunkQKLZ373Wjs.Gallery_default; exports.HeaderLogo = _chunkQKLZ373Wjs.header_default; exports.InformationCard = _chunkQKLZ373Wjs.InformationCard_default; exports.InstagramFeed = _chunkQKLZ373Wjs.InstagramFeed_default; exports.MainHeader = _chunkQKLZ373Wjs.Header_default; exports.MainLayout = _chunkQKLZ373Wjs.MainLayout_default; exports.Map = _chunkQKLZ373Wjs.Map_default; exports.Navigation = _chunkQKLZ373Wjs.Navigation_default; exports.PageBanner = _chunkQKLZ373Wjs.PageBanner_default; exports.Section = _chunkQKLZ373Wjs.Section_default; exports.Slider = _chunkQKLZ373Wjs.Slider_default; exports.SocialLinks = _chunkQKLZ373Wjs.SocialLinks_default; exports.Tabs = _chunkQKLZ373Wjs.Tabs_default; exports.Video = _chunkQKLZ373Wjs.Video_default; exports.WhatsAppChat = _chunkQKLZ373Wjs.WhatsAppChat_default;
+
+
+exports.AlertBanner = _chunkVZ74AM2Ijs.AlertBanner_default; exports.Banner = _chunkVZ74AM2Ijs.Banner_default; exports.BaseCard = _chunkVZ74AM2Ijs.BaseCard_default; exports.Button = _chunkVZ74AM2Ijs.Button_default; exports.DataTable = _chunkVZ74AM2Ijs.DataTable; exports.DetailedCard = _chunkVZ74AM2Ijs.DetailedCard_default; exports.Footer = _chunkVZ74AM2Ijs.Footer_default; exports.FooterLogo = _chunkVZ74AM2Ijs.footer_default; exports.Gallery = _chunkVZ74AM2Ijs.Gallery_default; exports.HeaderLogo = _chunkVZ74AM2Ijs.header_default; exports.InformationCard = _chunkVZ74AM2Ijs.InformationCard_default; exports.InstagramFeed = _chunkVZ74AM2Ijs.InstagramFeed_default; exports.MainHeader = _chunkVZ74AM2Ijs.Header_default; exports.MainLayout = _chunkVZ74AM2Ijs.MainLayout_default; exports.Map = _chunkVZ74AM2Ijs.Map_default; exports.Navigation = _chunkVZ74AM2Ijs.Navigation_default; exports.PageBanner = _chunkVZ74AM2Ijs.PageBanner_default; exports.Section = _chunkVZ74AM2Ijs.Section_default; exports.Slider = _chunkVZ74AM2Ijs.Slider_default; exports.SocialLinks = _chunkVZ74AM2Ijs.SocialLinks_default; exports.Tabs = _chunkVZ74AM2Ijs.Tabs_default; exports.TextInput = _chunkVZ74AM2Ijs.TextInput_default; exports.Video = _chunkVZ74AM2Ijs.Video_default; exports.WhatsAppChat = _chunkVZ74AM2Ijs.WhatsAppChat_default;

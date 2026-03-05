@@ -1,4 +1,4 @@
-var __defProp = Object.defineProperty;
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
 var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
@@ -17,13 +17,25 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+var __objRest = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
 
 // src/components/AlertBanner/index.tsx
-import { Alert } from "antd";
-import { jsx } from "react/jsx-runtime";
+var _antd = require('antd');
+var _jsxruntime = require('react/jsx-runtime');
 var AlertBanner = ({ message, description, type = "info", showIcon = true }) => {
-  return /* @__PURE__ */ jsx(
-    Alert,
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+    _antd.Alert,
     {
       message,
       description,
@@ -37,19 +49,19 @@ var AlertBanner = ({ message, description, type = "info", showIcon = true }) => 
 var AlertBanner_default = AlertBanner;
 
 // src/components/Header/index.tsx
-import React3, { useState } from "react";
-import { Menu as Menu3, Button as Button3, Col as Col6, Space as Space2, Drawer } from "antd";
-import {
-  MailOutlined,
-  ClockCircleOutlined,
-  EnvironmentOutlined,
-  MenuOutlined
-} from "@ant-design/icons";
+var _react = require('react'); var _react2 = _interopRequireDefault(_react);
+
+
+
+
+
+
+var _icons = require('@ant-design/icons');
 
 // src/components/Header/header.style.ts
-import styled from "styled-components";
-import Link from "next/link";
-import { Layout, Col, Button, Menu, Row } from "antd";
+var _styledcomponents = require('styled-components'); var _styledcomponents2 = _interopRequireDefault(_styledcomponents);
+var _link = require('next/link'); var _link2 = _interopRequireDefault(_link);
+
 
 // src/styles/breakpoints.ts
 var breakpoints = {
@@ -64,7 +76,7 @@ var media = {
 };
 
 // src/components/Header/header.style.ts
-var BlueTopBar = styled.div`
+var BlueTopBar = _styledcomponents2.default.div`
   color: #fff;
   &:after {
     content: "";
@@ -77,7 +89,7 @@ var BlueTopBar = styled.div`
     z-index: 0;
   }
 `;
-var BlueTopBarRow = styled(Row)`
+var BlueTopBarRow = _styledcomponents2.default.call(void 0, _antd.Row)`
   background: #1766b5;
   z-index: 1;
     .book-now-button {
@@ -99,10 +111,10 @@ var BlueTopBarRow = styled(Row)`
     z-index: 2;
   }
 `;
-var MainHeaderWrapper = styled.div`
+var MainHeaderWrapper = _styledcomponents2.default.div`
   background: #fff;
 `;
-var LogoBox = styled.div`
+var LogoBox = _styledcomponents2.default.div`
   width: 54px;
   height: 54px;
   background: #f5f5f5;
@@ -112,40 +124,40 @@ var LogoBox = styled.div`
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 `;
-var BrandTitle = styled.h1`
+var BrandTitle = _styledcomponents2.default.h1`
   color: #222;
   margin: 0;
   font-weight: 700;
   letter-spacing: 1px;
 
 `;
-var BrandSubtitle = styled.div`
+var BrandSubtitle = _styledcomponents2.default.div`
   font-size: 14px;
   color: #999;
   font-weight: 500;
   letter-spacing: 1px;
 `;
-var InfoBlock = styled.div`
+var InfoBlock = _styledcomponents2.default.div`
   /* display: flex; */
   align-items: center;
   gap: 10px;
 `;
-var InfoBlockTitle = styled.div`
+var InfoBlockTitle = _styledcomponents2.default.div`
   color: #222;
   font-size: 15px;
   font-weight: bold;
 `;
-var InfoBlockSub = styled.div`
+var InfoBlockSub = _styledcomponents2.default.div`
   color: #888;
   font-size: 14px;
 `;
-var HeaderWrapper = styled(Layout.Header)`
+var HeaderWrapper = _styledcomponents2.default.call(void 0, _antd.Layout.Header)`
   background: #fff !important;
   padding: 0;
   box-shadow: none;
   height: auto;
 `;
-var BlackNavBarRow = styled.nav`
+var BlackNavBarRow = _styledcomponents2.default.nav`
 .nav-row {
     z-index: 1;
     background: #222 !important;
@@ -181,15 +193,15 @@ var BlackNavBarRow = styled.nav`
     z-index: 0;
   }
 `;
-var WelcomeText = styled.span`
+var WelcomeText = _styledcomponents2.default.span`
   font-size: 14px;
   font-weight: 500;
   margin-left: 24px;
 `;
-var SocialIconLink = styled.a`
+var SocialIconLink = _styledcomponents2.default.a`
   color: #ffffffa6 !important;
 `;
-var BookNowButton = styled.button`
+var BookNowButton = _styledcomponents2.default.button`
   background: #222;
   color: #fff;
   border: none;
@@ -199,35 +211,35 @@ var BookNowButton = styled.button`
   border-radius: 0;
   padding: 0 32px;
 `;
-var LogoRow = styled(Link)`
+var LogoRow = _styledcomponents2.default.call(void 0, _link2.default)`
    
 `;
-var LogoImage = styled.img`
+var LogoImage = _styledcomponents2.default.img`
   height: 50px;
   object-fit: contain;
     ${media.min("md")} {
       height: 90px;
     }
 `;
-var BrandTitleHighlight = styled.span`
+var BrandTitleHighlight = _styledcomponents2.default.span`
   color: ${(props) => props.color || "#1766b5"};
 `;
-var MainHeaderColLeft = styled(Col)`
+var MainHeaderColLeft = _styledcomponents2.default.call(void 0, _antd.Col)`
       
 `;
-var MainHeaderColRight = styled(Col)`
+var MainHeaderColRight = _styledcomponents2.default.call(void 0, _antd.Col)`
   gap: 40px;
   padding-right: 32px;
   ${media.max("md")} {
       display: none;
     }
 `;
-var SearchButton = styled(Button)`
+var SearchButton = _styledcomponents2.default.call(void 0, _antd.Button)`
   color: #fff;
   border: 1px dashed #1766b5;
   background: transparent;
 `;
-var MenuStyled = styled(Menu)`
+var MenuStyled = _styledcomponents2.default.call(void 0, _antd.Menu)`
   background: transparent;
   border: none;
   font-weight: 500;
@@ -252,31 +264,31 @@ var MenuStyled = styled(Menu)`
 `;
 
 // src/components/Header/navItems.tsx
-import {
-  HomeOutlined,
-  CarOutlined,
-  SafetyCertificateOutlined
-} from "@ant-design/icons";
-import Link2 from "next/link";
-import { jsx as jsx2 } from "react/jsx-runtime";
+
+
+
+
+
+
+
 var navItems = [
   {
     key: "home",
     path: "/",
-    label: /* @__PURE__ */ jsx2(Link2, { href: "/", children: "Home" }),
-    icon: /* @__PURE__ */ jsx2(HomeOutlined, {})
+    label: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _link2.default, { href: "/", children: "Home" }),
+    icon: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.HomeOutlined, {})
   },
   {
     key: "bodyshop",
     path: "/bodyshop",
-    label: /* @__PURE__ */ jsx2(Link2, { href: "/bodyshop", children: "Body Shop" }),
-    icon: /* @__PURE__ */ jsx2(CarOutlined, {})
+    label: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _link2.default, { href: "/bodyshop", children: "Body Shop" }),
+    icon: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.CarOutlined, {})
   },
   {
     key: "paint-protection",
     path: "/paint-protections",
-    label: /* @__PURE__ */ jsx2(Link2, { href: "/paint-protections", children: "Detailing & Paint Protection" }),
-    icon: /* @__PURE__ */ jsx2(SafetyCertificateOutlined, {})
+    label: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _link2.default, { href: "/paint-protections", children: "Detailing & Paint Protection" }),
+    icon: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.SafetyCertificateOutlined, {})
   }
   // {
   //     key: 'coatings',
@@ -333,11 +345,11 @@ var HEADER_CONTENT = {
 };
 
 // src/components/Header/index.tsx
-import { usePathname } from "next/navigation";
+var _navigation = require('next/navigation');
 
 // src/components/Banner/index.tsx
-import Image from "next/image";
-import { jsx as jsx3, jsxs } from "react/jsx-runtime";
+var _image = require('next/image'); var _image2 = _interopRequireDefault(_image);
+
 var Banner = ({
   title,
   subtitle,
@@ -348,9 +360,9 @@ var Banner = ({
   className = "",
   children
 }) => {
-  return /* @__PURE__ */ jsxs("div", { className: `banner-container flex flex-col md:flex-row items-center justify-center gap-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-100 rounded-lg shadow-lg ${className}`, children: [
-    /* @__PURE__ */ jsx3("div", { className: "banner-image-container flex-shrink-0", children: /* @__PURE__ */ jsx3(
-      Image,
+  return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: `banner-container flex flex-col md:flex-row items-center justify-center gap-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-100 rounded-lg shadow-lg ${className}`, children: [
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "banner-image-container flex-shrink-0", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      _image2.default,
       {
         src: imageSrc,
         alt: imageAlt,
@@ -360,18 +372,18 @@ var Banner = ({
         priority: true
       }
     ) }),
-    /* @__PURE__ */ jsxs("div", { className: "banner-content flex flex-col gap-4 text-center md:text-left", children: [
-      title && /* @__PURE__ */ jsx3("h2", { className: "text-3xl md:text-4xl font-bold text-gray-800 leading-tight", children: title }),
-      subtitle && /* @__PURE__ */ jsx3("p", { className: "text-lg md:text-xl text-gray-600 leading-relaxed", children: subtitle }),
-      children && /* @__PURE__ */ jsx3("div", { className: "banner-children", children })
+    /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "banner-content flex flex-col gap-4 text-center md:text-left", children: [
+      title && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h2", { className: "text-3xl md:text-4xl font-bold text-gray-800 leading-tight", children: title }),
+      subtitle && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "p", { className: "text-lg md:text-xl text-gray-600 leading-relaxed", children: subtitle }),
+      children && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "banner-children", children })
     ] })
   ] });
 };
 var Banner_default = Banner;
 
 // src/components/Slider/index.tsx
-import { Carousel } from "antd";
-import { jsx as jsx4, jsxs as jsxs2 } from "react/jsx-runtime";
+
+
 var contentStyle = {
   margin: 0,
   height: "160px",
@@ -382,25 +394,25 @@ var contentStyle = {
 };
 var defaultSlides = [
   "Welcome to Automotive Expert!",
-  /* @__PURE__ */ jsxs2("div", { children: [
-    /* @__PURE__ */ jsx4("h2", { style: { color: "#fff", margin: 0 }, children: "Quality Car Care" }),
-    /* @__PURE__ */ jsx4("p", { style: { color: "#fff", margin: 0 }, children: "Professional service for your vehicle" })
+  /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { children: [
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h2", { style: { color: "#fff", margin: 0 }, children: "Quality Car Care" }),
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "p", { style: { color: "#fff", margin: 0 }, children: "Professional service for your vehicle" })
   ] }),
-  /* @__PURE__ */ jsx4("img", { src: "/next.svg", alt: "Automotive", style: { width: "100%", height: 160, objectFit: "contain", background: "#364d79" } })
+  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "img", { src: "/next.svg", alt: "Automotive", style: { width: "100%", height: 160, objectFit: "contain", background: "#364d79" } })
 ];
 var Slider = ({ slides, infinite = true, autoplaySpeed = 1e3, autoplay }) => {
   const data = slides && slides.length > 0 ? slides : defaultSlides;
-  return /* @__PURE__ */ jsx4(Carousel, { arrows: true, autoplaySpeed, infinite, autoplay, children: data.map((slide, idx) => /* @__PURE__ */ jsx4("div", { children: typeof slide === "string" ? /* @__PURE__ */ jsx4("h3", { style: contentStyle, children: slide }) : slide }, idx)) });
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Carousel, { arrows: true, autoplaySpeed, infinite, autoplay, children: data.map((slide, idx) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { children: typeof slide === "string" ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h3", { style: contentStyle, children: slide }) : slide }, idx)) });
 };
 var Slider_default = Slider;
 
 // src/components/Footer/index.tsx
-import { Row as Row2, Col as Col2 } from "antd";
-import Link3 from "next/link";
+
+
 
 // src/components/Footer/style.ts
-import styled2 from "styled-components";
-var FooterWrapper = styled2.footer`
+
+var FooterWrapper = _styledcomponents2.default.footer`
   width: 100%;
   padding: 40px 0;
   background: #000;
@@ -430,7 +442,7 @@ var FooterWrapper = styled2.footer`
     color: #a4a4a4;
   }
 `;
-var FooterText = styled2.p`
+var FooterText = _styledcomponents2.default.p`
   margin: 0;
   font-size: 16px;
 `;
@@ -497,96 +509,96 @@ var carServices = [
 ];
 
 // src/components/Footer/index.tsx
-import { jsx as jsx5, jsxs as jsxs3 } from "react/jsx-runtime";
+
 var Footer = () => {
-  return /* @__PURE__ */ jsxs3(FooterWrapper, { children: [
-    /* @__PURE__ */ jsxs3("div", { className: "max-w-[1400px] mx-auto px-4", children: [
-      /* @__PURE__ */ jsxs3(Row2, { gutter: [16, 16], children: [
-        /* @__PURE__ */ jsxs3(Col2, { xs: 24, sm: 12, md: 9, children: [
-          /* @__PURE__ */ jsx5("figure", { className: "dropout-car-care footer-logo mb-8", children: /* @__PURE__ */ jsx5(footer_default, {}) }),
-          /* @__PURE__ */ jsxs3("div", { className: "md:pr-16", children: [
-            /* @__PURE__ */ jsxs3("p", { className: "mb-4", children: [
+  return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, FooterWrapper, { children: [
+    /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "max-w-[1400px] mx-auto px-4", children: [
+      /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Row, { gutter: [16, 16], children: [
+        /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Col, { xs: 24, sm: 12, md: 9, children: [
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "figure", { className: "dropout-car-care footer-logo mb-8", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, footer_default, {}) }),
+          /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "md:pr-16", children: [
+            /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "p", { className: "mb-4", children: [
               "At ",
-              /* @__PURE__ */ jsx5("strong", { className: "primary-color", children: "Dropout Car Care" }),
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "strong", { className: "primary-color", children: "Dropout Car Care" }),
               ", we are your complete car care specialists \u2014 dedicated to keeping your vehicle looking flawless and protected for years."
             ] }),
-            /* @__PURE__ */ jsxs3("p", { className: "mb-4", children: [
+            /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "p", { className: "mb-4", children: [
               "We offer a wide range of premium automotive services, including ",
-              /* @__PURE__ */ jsx5("strong", { className: "primary-color", children: "Paint Protection Film (PPF), Ceramic & Graphene Coatings, Professional Detailing, Denting & Painting" }),
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "strong", { className: "primary-color", children: "Paint Protection Film (PPF), Ceramic & Graphene Coatings, Professional Detailing, Denting & Painting" }),
               ", and ",
-              /* @__PURE__ */ jsx5("strong", { className: "primary-color", children: "Insurance Claim Assistance." })
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "strong", { className: "primary-color", children: "Insurance Claim Assistance." })
             ] }),
-            /* @__PURE__ */ jsxs3("p", { className: "mb-4", children: [
+            /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "p", { className: "mb-4", children: [
               "From ",
-              /* @__PURE__ */ jsx5("strong", { className: "primary-color", children: "bodyshop repairs  and panel painting to paint protection and restoration " }),
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "strong", { className: "primary-color", children: "bodyshop repairs  and panel painting to paint protection and restoration " }),
               ", our expert team ensures every vehicle receives unmatched precision, passion, and perfection."
             ] }),
-            /* @__PURE__ */ jsxs3("p", { children: [
+            /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "p", { children: [
               "Our team is trained to handle every vehicle with care, using ",
-              /* @__PURE__ */ jsx5("strong", { className: "primary-color", children: "international-grade products, advanced tools, and high-quality materials " }),
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "strong", { className: "primary-color", children: "international-grade products, advanced tools, and high-quality materials " }),
               " that ensure showroom-like perfection every time."
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ jsxs3(Col2, { xs: 24, sm: 12, md: 5, children: [
-          /* @__PURE__ */ jsx5("h3", { className: "relative uppercase", children: " Services Menu " }),
-          /* @__PURE__ */ jsx5("ul", { children: carServices.map((cat, i) => /* @__PURE__ */ jsx5("li", { className: "mb-4", children: /* @__PURE__ */ jsx5(Link3, { href: "#", children: cat.category }) }, i)) })
+        /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Col, { xs: 24, sm: 12, md: 5, children: [
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h3", { className: "relative uppercase", children: " Services Menu " }),
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "ul", { children: carServices.map((cat, i) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "li", { className: "mb-4", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _link2.default, { href: "#", children: cat.category }) }, i)) })
         ] }),
-        /* @__PURE__ */ jsxs3(Col2, { xs: 24, sm: 12, md: 5, children: [
-          /* @__PURE__ */ jsx5("h3", { className: "relative uppercase", children: "CONTECT INFO " }),
-          /* @__PURE__ */ jsxs3("address", { children: [
-            /* @__PURE__ */ jsxs3("div", { className: "address-line mb-4", children: [
-              /* @__PURE__ */ jsx5("span", { className: "address-label secondary-color barlow-medium block", children: "Phone : " }),
-              /* @__PURE__ */ jsx5("a", { className: "primary-color", href: "callto:+918727073012", children: "+91 8727073012 " })
+        /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Col, { xs: 24, sm: 12, md: 5, children: [
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h3", { className: "relative uppercase", children: "CONTECT INFO " }),
+          /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "address", { children: [
+            /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "address-line mb-4", children: [
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { className: "address-label secondary-color barlow-medium block", children: "Phone : " }),
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "a", { className: "primary-color", href: "callto:+918727073012", children: "+91 8727073012 " })
             ] }),
-            /* @__PURE__ */ jsxs3("div", { className: "address-line mb-4", children: [
-              /* @__PURE__ */ jsx5("span", { className: "address-label secondary-color barlow-medium block", children: "Email : " }),
-              /* @__PURE__ */ jsx5("a", { className: "primary-color", href: "mailto:care@dropoutcarcare.com", children: "care@dropoutcarcare.com" })
+            /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "address-line mb-4", children: [
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { className: "address-label secondary-color barlow-medium block", children: "Email : " }),
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "a", { className: "primary-color", href: "mailto:care@dropoutcarcare.com", children: "care@dropoutcarcare.com" })
             ] }),
-            /* @__PURE__ */ jsxs3("div", { className: "address-line mb-4", children: [
-              /* @__PURE__ */ jsx5("span", { className: "address-label secondary-color barlow-medium block", children: "Address : " }),
+            /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "address-line mb-4", children: [
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { className: "address-label secondary-color barlow-medium block", children: "Address : " }),
               "Ithera Market, Opp- Gaur world smart street,",
-              /* @__PURE__ */ jsx5("br", {}),
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "br", {}),
               " Grater Noida West, Uttar Pradesh, India"
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ jsxs3(Col2, { xs: 24, sm: 12, md: 5, children: [
-          /* @__PURE__ */ jsx5("h3", { className: "relative uppercase", children: "Follow Us" }),
-          /* @__PURE__ */ jsx5(SocialLinks_default, {})
+        /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Col, { xs: 24, sm: 12, md: 5, children: [
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h3", { className: "relative uppercase", children: "Follow Us" }),
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, SocialLinks_default, {})
         ] })
       ] }),
-      /* @__PURE__ */ jsxs3("p", { className: "copy-right-section pt-6 text-center", children: [
+      /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "p", { className: "copy-right-section pt-6 text-center", children: [
         "\xA9 ",
         (/* @__PURE__ */ new Date()).getFullYear(),
         " Dropout Car Care. All rights reserved."
       ] })
     ] }),
-    /* @__PURE__ */ jsx5(WhatsAppChat_default, {})
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, WhatsAppChat_default, {})
   ] });
 };
 var Footer_default = Footer;
 
 // src/components/logo/header.tsx
-import { jsx as jsx6 } from "react/jsx-runtime";
-var HeaderLogo = () => /* @__PURE__ */ jsx6("img", { src: "/dropout-car-care-black-blue.png", width: 300, height: 100, alt: "Dropout car care" });
+
+var HeaderLogo = () => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "img", { src: "/dropout-car-care-black-blue.png", width: 300, height: 100, alt: "Dropout car care" });
 var header_default = HeaderLogo;
 
 // src/components/logo/footer.tsx
-import { Fragment, jsx as jsx7 } from "react/jsx-runtime";
-var HeaderLogo2 = () => /* @__PURE__ */ jsx7(Fragment, { children: /* @__PURE__ */ jsx7("img", { src: "/dropout-car-care-white-blue.png", width: 300, height: 100, alt: "Dropout car care" }) });
+
+var HeaderLogo2 = () => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _jsxruntime.Fragment, { children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "img", { src: "/dropout-car-care-white-blue.png", width: 300, height: 100, alt: "Dropout car care" }) });
 var footer_default = HeaderLogo2;
 
 // src/components/SocialLinks/index.tsx
-import { FacebookFilled, InstagramFilled, YoutubeFilled } from "@ant-design/icons";
+
 
 // src/components/SocialLinks/style.ts
-import styled3 from "styled-components";
-var SocialList = styled3.div`
+
+var SocialList = _styledcomponents2.default.div`
   gap: 12px;
   align-items: center;
 `;
-var SocialLink = styled3.a`
+var SocialLink = _styledcomponents2.default.a`
   color: ${(p) => p.color || "#fff"};
   font-size: ${(p) => p.size ? `${p.size}px` : "20px"};
   display: inline-flex;
@@ -595,30 +607,30 @@ var SocialLink = styled3.a`
 `;
 
 // src/components/SocialLinks/index.tsx
-import { jsx as jsx8 } from "react/jsx-runtime";
+
 var socialLinks = [
-  { href: "https://www.instagram.com/dropoutcarcare/?hl=en", label: "Instagram", Icon: InstagramFilled },
-  { href: "https://www.youtube.com/@dropoutcarcare", label: "YouTube", Icon: YoutubeFilled },
-  { href: "https://www.facebook.com/people/Dropout-Car-Care/61572302514257/", label: "Facebook", Icon: FacebookFilled }
+  { href: "https://www.instagram.com/dropoutcarcare/?hl=en", label: "Instagram", Icon: _icons.InstagramFilled },
+  { href: "https://www.youtube.com/@dropoutcarcare", label: "YouTube", Icon: _icons.YoutubeFilled },
+  { href: "https://www.facebook.com/people/Dropout-Car-Care/61572302514257/", label: "Facebook", Icon: _icons.FacebookFilled }
 ];
 var SocialLinks = ({ size = 20, color = "", className = "" }) => {
-  return /* @__PURE__ */ jsx8(SocialList, { className: `md:flex ${className}`, children: socialLinks.map((s) => /* @__PURE__ */ jsx8(SocialLink, { href: s.href, target: "_blank", rel: "noopener noreferrer", "aria-label": s.label, title: s.label, size, color, children: /* @__PURE__ */ jsx8(s.Icon, {}) }, s.href)) });
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, SocialList, { className: `md:flex ${className}`, children: socialLinks.map((s) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, SocialLink, { href: s.href, target: "_blank", rel: "noopener noreferrer", "aria-label": s.label, title: s.label, size, color, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, s.Icon, {}) }, s.href)) });
 };
 var SocialLinks_default = SocialLinks;
 
 // src/components/Tabs/index.tsx
-import { Tabs } from "antd";
-import { jsx as jsx9 } from "react/jsx-runtime";
-var SharedTabs = ({ items: items2, defaultActiveKey, centered = false }) => {
-  const antdItems = items2.map((it) => ({ key: it.key, label: it.label, children: it.children }));
-  return /* @__PURE__ */ jsx9(Tabs, { items: antdItems, defaultActiveKey, centered });
+
+
+var SharedTabs = ({ items, defaultActiveKey, centered = false }) => {
+  const antdItems = items.map((it) => ({ key: it.key, label: it.label, children: it.children }));
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Tabs, { items: antdItems, defaultActiveKey, centered });
 };
 var Tabs_default = SharedTabs;
 
 // src/components/Cards/BaseCard/index.tsx
-import styled4 from "styled-components";
-import { jsx as jsx10 } from "react/jsx-runtime";
-var Card = styled4.div`
+
+
+var Card = _styledcomponents2.default.div`
   background: #fff;
   border-radius: 8px;
   padding: ${({ padding }) => typeof padding === "number" ? `${padding}px` : padding != null ? padding : "16px"};
@@ -627,16 +639,16 @@ var Card = styled4.div`
   display: block;
 `;
 var BaseCard = ({ children, className, bordered = false, padding, elevation = 4 }) => {
-  return /* @__PURE__ */ jsx10(Card, { className, bordered, padding, elevation, children });
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, Card, { className, bordered, padding, elevation, children });
 };
 var BaseCard_default = BaseCard;
 
 // src/components/WhatsAppChat/index.tsx
-import styled5 from "styled-components";
-import { FloatButton, Tooltip } from "antd";
-import { WhatsAppOutlined } from "@ant-design/icons";
-import { jsx as jsx11 } from "react/jsx-runtime";
-var StyledFloatButton = styled5(FloatButton)`
+
+
+
+
+var StyledFloatButton = _styledcomponents2.default.call(void 0, _antd.FloatButton)`
     &.ant-float-button {
         .ant-float-button-body {
             background-color: #25d366;
@@ -661,10 +673,10 @@ var WhatsAppChat = ({
     const whatsappUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
-  return /* @__PURE__ */ jsx11(Tooltip, { title: tooltip, placement: "left", children: /* @__PURE__ */ jsx11(
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Tooltip, { title: tooltip, placement: "left", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
     StyledFloatButton,
     __spreadValues({
-      icon: /* @__PURE__ */ jsx11(WhatsAppOutlined, {}),
+      icon: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.WhatsAppOutlined, {}),
       onClick: handleClick,
       type: "primary",
       style: {
@@ -678,8 +690,8 @@ var WhatsAppChat = ({
 var WhatsAppChat_default = WhatsAppChat;
 
 // src/components/PageBanner/style.ts
-import styled6 from "styled-components";
-var BannerWrapper = styled6.div`
+
+var BannerWrapper = _styledcomponents2.default.div`
   position: relative;
   width: 100%;
   height: 300px;
@@ -689,7 +701,7 @@ var BannerWrapper = styled6.div`
   background-color: #1a1a1a;
   overflow: hidden;
 `;
-var BannerOverlay = styled6.div`
+var BannerOverlay = _styledcomponents2.default.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -698,14 +710,14 @@ var BannerOverlay = styled6.div`
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
   z-index: 1;
 `;
-var BannerContent = styled6.div`
+var BannerContent = _styledcomponents2.default.div`
   position: relative;
   z-index: 2;
   text-align: center;
   color: #ffffff;
   padding: 0 20px;
 `;
-var PageTitle = styled6.h1`
+var PageTitle = _styledcomponents2.default.h1`
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
@@ -716,7 +728,7 @@ var PageTitle = styled6.h1`
     font-size: 2rem;
   }
 `;
-var Subtitle = styled6.p`
+var Subtitle = _styledcomponents2.default.p`
   font-size: 1.2rem;
   margin-top: 1rem;
   opacity: 0.9;
@@ -728,7 +740,7 @@ var Subtitle = styled6.p`
     font-size: 1rem;
   }
 `;
-var BannerImage = styled6.img`
+var BannerImage = _styledcomponents2.default.img`
   position: absolute;
   top: 0;
   left: 0;
@@ -739,15 +751,15 @@ var BannerImage = styled6.img`
 `;
 
 // src/components/PageBanner/index.tsx
-import { jsx as jsx12, jsxs as jsxs4 } from "react/jsx-runtime";
+
 var PageBanner = ({
   title,
   subtitle,
   backgroundImage,
   height = 300
 }) => {
-  return /* @__PURE__ */ jsxs4(BannerWrapper, { style: { height: `${height}px` }, children: [
-    backgroundImage && /* @__PURE__ */ jsx12(
+  return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, BannerWrapper, { style: { height: `${height}px` }, children: [
+    backgroundImage && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
       BannerImage,
       {
         src: backgroundImage.src,
@@ -760,23 +772,23 @@ var PageBanner = ({
         }
       }
     ),
-    /* @__PURE__ */ jsx12(BannerOverlay, {}),
-    /* @__PURE__ */ jsxs4(BannerContent, { children: [
-      /* @__PURE__ */ jsx12(PageTitle, { children: title }),
-      subtitle && /* @__PURE__ */ jsx12(Subtitle, { children: subtitle })
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, BannerOverlay, {}),
+    /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, BannerContent, { children: [
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, PageTitle, { children: title }),
+      subtitle && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, Subtitle, { children: subtitle })
     ] })
   ] });
 };
 var PageBanner_default = PageBanner;
 
 // src/components/Cards/InformationCard/index.tsx
-import { Typography, Col as Col3, Row as Row3 } from "antd";
-import Image2 from "next/image";
+
+
 
 // src/components/Cards/InformationCard/style.ts
-import styled7 from "styled-components";
-import { Card as Card2 } from "antd";
-var StyledCard = styled7(Card2)`
+
+
+var StyledCard = _styledcomponents2.default.call(void 0, _antd.Card)`
     padding: ${({ spacing }) => spacing || ""};
     background: ${({ background }) => background || "#fff"};
     .ant-card-body {
@@ -786,7 +798,7 @@ var StyledCard = styled7(Card2)`
 `;
 
 // src/components/Cards/InformationCard/index.tsx
-import { jsx as jsx13, jsxs as jsxs5 } from "react/jsx-runtime";
+
 var imageContainerStyle = {
   position: "relative",
   width: "100%",
@@ -803,9 +815,9 @@ var defaultImage = {
   height: 273
   // Using square aspect ratio for default
 };
-var InformationCard = ({ title, image, description }) => /* @__PURE__ */ jsx13(StyledCard, { className: "p-0", children: /* @__PURE__ */ jsxs5(Row3, { gutter: [0, 0], children: [
-  /* @__PURE__ */ jsx13(Col3, { xs: 24, sm: 24, md: 12, style: { height: "100%" }, children: /* @__PURE__ */ jsx13("div", { style: imageContainerStyle, children: /* @__PURE__ */ jsx13(
-    Image2,
+var InformationCard = ({ title, image, description }) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, StyledCard, { className: "p-0", children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Row, { gutter: [0, 0], children: [
+  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { xs: 24, sm: 24, md: 12, style: { height: "100%" }, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { style: imageContainerStyle, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+    _image2.default,
     {
       src: (image == null ? void 0 : image.src) || defaultImage.src,
       alt: (image == null ? void 0 : image.alt) || "Information card image",
@@ -815,20 +827,20 @@ var InformationCard = ({ title, image, description }) => /* @__PURE__ */ jsx13(S
       sizes: "(max-width: 768px) 100vw, 50vw"
     }
   ) }) }),
-  /* @__PURE__ */ jsx13(Col3, { xs: 24, sm: 24, md: 12, children: /* @__PURE__ */ jsxs5("div", { className: "py-3 md:p-6", children: [
-    title && /* @__PURE__ */ jsx13(Typography.Title, { level: 3, style: { marginTop: 0 }, children: title }),
-    description && /* @__PURE__ */ jsx13(Typography.Paragraph, { children: description })
+  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { xs: 24, sm: 24, md: 12, children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "py-3 md:p-6", children: [
+    title && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Typography.Title, { level: 3, style: { marginTop: 0 }, children: title }),
+    description && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Typography.Paragraph, { children: description })
   ] }) })
 ] }) });
 var InformationCard_default = InformationCard;
 
 // src/components/Section/style.ts
-import styled8 from "styled-components";
-var StyledSection = styled8.section`
+
+var StyledSection = _styledcomponents2.default.section`
     padding: ${({ spacing }) => spacing || ""};
     background: ${({ background }) => background || "#fff"};
 `;
-var SectionTitle = styled8.h2`
+var SectionTitle = _styledcomponents2.default.h2`
     font-size: 3rem;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.85);
@@ -840,7 +852,7 @@ var SectionTitle = styled8.h2`
 `;
 
 // src/components/Section/index.tsx
-import { jsx as jsx14, jsxs as jsxs6 } from "react/jsx-runtime";
+
 var Section = ({
   title,
   children,
@@ -848,21 +860,67 @@ var Section = ({
   titleAlign = "center",
   fluid = false
 }) => {
-  return /* @__PURE__ */ jsx14(StyledSection, { className, children: /* @__PURE__ */ jsxs6("div", { className: fluid ? "max-w-[1400px] mx-auto" : "", children: [
-    title && /* @__PURE__ */ jsx14(SectionTitle, { align: titleAlign, children: title }),
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, StyledSection, { className, children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: fluid ? "max-w-[1400px] mx-auto" : "", children: [
+    title && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, SectionTitle, { align: titleAlign, children: title }),
     children
   ] }) });
 };
 var Section_default = Section;
 
+// src/components/Form/TextInput/index.tsx
+
+
+
+var TextInput = _react2.default.forwardRef(
+  (_a, ref) => {
+    var _b = _a, { wrapperClassName, label, showLabel = true } = _b, props = __objRest(_b, ["wrapperClassName", "label", "showLabel"]);
+    return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: wrapperClassName, children: [
+      showLabel && label ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "label", { style: { display: "block", marginBottom: 6 }, children: label }) : null,
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Input, __spreadValues({ ref }, props))
+    ] });
+  }
+);
+TextInput.TextArea = _antd.Input.TextArea;
+TextInput.Search = _antd.Input.Search;
+TextInput.Password = _antd.Input.Password;
+var TextInput_default = TextInput;
+
+// src/components/Button/index.tsx
+
+
+
+var mapToAnt = (color, variant) => {
+  let type = "default";
+  let ghost = false;
+  if (color && color !== "default") {
+    type = color;
+  }
+  if (variant === "outline") {
+    ghost = true;
+    if (!color || color === "default") type = "default";
+  } else if (variant === "text") {
+    type = "text";
+    ghost = false;
+  } else {
+  }
+  return { type, ghost };
+};
+var Button3 = _react2.default.forwardRef((props, ref) => {
+  const _a = props, { color = "default", variant = "solid", children } = _a, rest = __objRest(_a, ["color", "variant", "children"]);
+  const ant = mapToAnt(color, variant);
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Button, __spreadProps(__spreadValues(__spreadValues({ ref }, ant), rest), { children }));
+});
+Button3.displayName = "Button";
+var Button_default = Button3;
+
 // src/components/Cards/DetailedCard/index.tsx
-import { Typography as Typography2, Col as Col4, Row as Row4 } from "antd";
-import Image3 from "next/image";
+
+
 
 // src/components/Cards/DetailedCard/style.ts
-import styled9 from "styled-components";
-import { Card as Card4 } from "antd";
-var StyledCard2 = styled9(Card4)`
+
+
+var StyledCard2 = _styledcomponents2.default.call(void 0, _antd.Card)`
     padding: ${({ spacing }) => spacing || ""};
     background: ${({ background }) => background || "#fff"};
     .ant-card-body {
@@ -872,7 +930,7 @@ var StyledCard2 = styled9(Card4)`
 `;
 
 // src/components/Cards/DetailedCard/index.tsx
-import { jsx as jsx15, jsxs as jsxs7 } from "react/jsx-runtime";
+
 var imageContainerStyle2 = {
   position: "relative",
   width: "100%",
@@ -895,9 +953,9 @@ var DetailedCard = ({
   subTitle,
   description,
   image
-}) => /* @__PURE__ */ jsx15(StyledCard2, { className: "p-0", children: /* @__PURE__ */ jsxs7(Row4, { gutter: [0, 0], children: [
-  /* @__PURE__ */ jsx15(Col4, { xs: 24, sm: 24, md: 10, style: { height: "100%" }, children: /* @__PURE__ */ jsx15("div", { style: imageContainerStyle2, children: /* @__PURE__ */ jsx15(
-    Image3,
+}) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, StyledCard2, { className: "p-0", children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Row, { gutter: [0, 0], children: [
+  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { xs: 24, sm: 24, md: 10, style: { height: "100%" }, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { style: imageContainerStyle2, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+    _image2.default,
     {
       src: (image == null ? void 0 : image.src) || defaultImage2.src,
       alt: (image == null ? void 0 : image.alt) || "Information card image",
@@ -907,20 +965,20 @@ var DetailedCard = ({
       sizes: "(max-width: 768px) 100vw, 50vw"
     }
   ) }) }),
-  /* @__PURE__ */ jsx15(Col4, { xs: 24, sm: 24, md: 12, children: /* @__PURE__ */ jsxs7("div", { style: { padding: 24 }, children: [
-    subTitle && /* @__PURE__ */ jsx15(Typography2.Title, { level: 4, children: subTitle }),
-    title && /* @__PURE__ */ jsx15(Typography2.Title, { level: 3, children: title }),
-    description && /* @__PURE__ */ jsx15(Typography2.Paragraph, { children: description })
+  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { xs: 24, sm: 24, md: 12, children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { style: { padding: 24 }, children: [
+    subTitle && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Typography.Title, { level: 4, children: subTitle }),
+    title && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Typography.Title, { level: 3, children: title }),
+    description && /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Typography.Paragraph, { children: description })
   ] }) })
 ] }) });
 var DetailedCard_default = DetailedCard;
 
 // src/components/InstagramFeed/index.tsx
-import styled10 from "styled-components";
-import { Card as Card5, Row as Row5, Col as Col5, Skeleton } from "antd";
-import Link4 from "next/link";
-import { jsx as jsx16, jsxs as jsxs8 } from "react/jsx-runtime";
-var FeedWrapper = styled10.div`
+
+
+
+
+var FeedWrapper = _styledcomponents2.default.div`
     .instagram-card {
         position: relative;
         overflow: hidden;
@@ -983,7 +1041,7 @@ var FeedWrapper = styled10.div`
         }
     }
 `;
-var HeaderSection = styled10.div`
+var HeaderSection = _styledcomponents2.default.div`
     text-align: center;
     margin-bottom: 2rem;
 
@@ -1009,13 +1067,13 @@ var InstagramFeed = ({
 }) => {
   const colSpan = 24 / columns;
   if (loading) {
-    return /* @__PURE__ */ jsx16(FeedWrapper, { children: /* @__PURE__ */ jsx16(Row5, { gutter: [16, 16], children: [...Array(columns * 2)].map((_, index) => /* @__PURE__ */ jsx16(Col5, { xs: 12, sm: 8, md: colSpan, children: /* @__PURE__ */ jsx16(Card5, { children: /* @__PURE__ */ jsx16(Skeleton.Image, { active: true, style: { width: "100%", height: "200px" } }) }) }, index)) }) });
+    return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, FeedWrapper, { children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Row, { gutter: [16, 16], children: [...Array(columns * 2)].map((_, index) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { xs: 12, sm: 8, md: colSpan, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Card, { children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Skeleton.Image, { active: true, style: { width: "100%", height: "200px" } }) }) }, index)) }) });
   }
-  return /* @__PURE__ */ jsxs8(FeedWrapper, { children: [
-    /* @__PURE__ */ jsxs8(HeaderSection, { children: [
-      /* @__PURE__ */ jsx16("h2", { children: "Follow Us on Instagram" }),
-      /* @__PURE__ */ jsxs8(
-        Link4,
+  return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, FeedWrapper, { children: [
+    /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, HeaderSection, { children: [
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h2", { children: "Follow Us on Instagram" }),
+      /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
+        _link2.default,
         {
           href: `https://instagram.com/${username}`,
           target: "_blank",
@@ -1028,7 +1086,7 @@ var InstagramFeed = ({
         }
       )
     ] }),
-    /* @__PURE__ */ jsx16(Row5, { gutter: [16, 16], children: /* @__PURE__ */ jsx16(Col5, { xs: 12, sm: 8, md: 6, children: /* @__PURE__ */ jsx16(
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Row, { gutter: [16, 16], children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { xs: 12, sm: 8, md: 6, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
       "div",
       {
         className: "instagram-card",
@@ -1045,9 +1103,9 @@ var InstagramFeed = ({
 var InstagramFeed_default = InstagramFeed;
 
 // src/components/Map/index.tsx
-import { jsx as jsx17 } from "react/jsx-runtime";
+
 var Map = () => {
-  return /* @__PURE__ */ jsx17("div", { className: "w-full rounded-lg overflow-hidden shadow-lg", children: /* @__PURE__ */ jsx17(
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "w-full rounded-lg overflow-hidden shadow-lg", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
     "iframe",
     {
       title: "Dropout Car Care, Noida Extension Location",
@@ -1064,7 +1122,7 @@ var Map = () => {
 var Map_default = Map;
 
 // src/components/Video/index.tsx
-import { jsx as jsx18, jsxs as jsxs9 } from "react/jsx-runtime";
+
 var Video = ({
   src,
   poster,
@@ -1094,16 +1152,16 @@ var Video = ({
   const sizeStyle = {};
   if (width) sizeStyle.width = typeof width === "number" ? `${width}px` : width;
   if (height) sizeStyle.height = typeof height === "number" ? `${height}px` : height;
-  return /* @__PURE__ */ jsx18("div", { className, style, children: /* @__PURE__ */ jsxs9("video", __spreadProps(__spreadValues({}, videoProps), { style: __spreadValues({ display: "block", maxWidth: "100%" }, sizeStyle), children: [
-    /* @__PURE__ */ jsx18("source", { src }),
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className, style, children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "video", __spreadProps(__spreadValues({}, videoProps), { style: __spreadValues({ display: "block", maxWidth: "100%" }, sizeStyle), children: [
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "source", { src }),
     "Your browser does not support the video tag."
   ] })) });
 };
 var Video_default = Video;
 
 // src/components/Gallery/index.tsx
-import { Image as AntImage } from "antd";
-import { jsx as jsx19 } from "react/jsx-runtime";
+
+
 var Gallery = ({
   images,
   columns = 3,
@@ -1119,14 +1177,14 @@ var Gallery = ({
     alignItems: "start",
     width: "100%"
   }, style);
-  return /* @__PURE__ */ jsx19("div", { className, style: gridStyle, children: images && images.map((img, idx) => /* @__PURE__ */ jsx19(
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className, style: gridStyle, children: images && images.map((img, idx) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
     "button",
     {
       onClick: () => onImageClick && onImageClick(img, idx),
       style: { border: "none", padding: 0, background: "transparent", cursor: onImageClick ? "pointer" : "default" },
       "aria-label": img.alt || `Image ${idx + 1}`,
-      children: /* @__PURE__ */ jsx19(
-        AntImage,
+      children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+        _antd.Image,
         {
           src: img.src,
           alt: img.alt || "",
@@ -1143,8 +1201,8 @@ var Gallery = ({
 var Gallery_default = Gallery;
 
 // src/components/Navigation/index.tsx
-import Link5 from "next/link";
-import { jsx as jsx20, jsxs as jsxs10 } from "react/jsx-runtime";
+
+
 var navItems2 = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
@@ -1169,15 +1227,15 @@ var navWrapperStyle = {
 };
 var Navigation = () => {
   const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
-  return /* @__PURE__ */ jsx20("nav", { style: navWrapperStyle, "aria-label": "Main navigation", children: navItems2.map((item) => {
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "nav", { style: navWrapperStyle, "aria-label": "Main navigation", children: navItems2.map((item) => {
     const isActive = pathname === item.href;
-    return /* @__PURE__ */ jsxs10(
-      Link5,
+    return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
+      _link2.default,
       {
         href: item.href,
         style: __spreadValues(__spreadValues({}, linkBaseStyle), isActive ? activeStyle : {}),
         children: [
-          item.icon ? /* @__PURE__ */ jsx20("span", { style: { marginRight: 6 }, children: item.icon }) : null,
+          item.icon ? /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { style: { marginRight: 6 }, children: item.icon }) : null,
           item.label
         ]
       },
@@ -1188,24 +1246,29 @@ var Navigation = () => {
 var Navigation_default = Navigation;
 
 // src/components/MainLayout/index.tsx
-import React from "react";
-import { UploadOutlined, UserOutlined, VideoCameraOutlined } from "@ant-design/icons";
-import { Layout as Layout2, Menu as Menu2, theme } from "antd";
-import { jsx as jsx21, jsxs as jsxs11 } from "react/jsx-runtime";
-var { Header, Content, Footer: Footer2, Sider } = Layout2;
-var items = [UserOutlined, VideoCameraOutlined, UploadOutlined, UserOutlined].map(
-  (icon, index) => ({
-    key: String(index + 1),
-    icon: React.createElement(icon),
-    label: `nav ${index + 1}`
-  })
-);
-var MainLayout = ({ children }) => {
+
+
+
+
+var { Header, Content, Footer: Footer2, Sider } = _antd.Layout;
+var defaultItems = [
+  _icons.UserOutlined,
+  _icons.VideoCameraOutlined,
+  _icons.UploadOutlined,
+  _icons.UserOutlined
+].map((icon, index) => ({
+  key: String(index + 1),
+  icon: _react2.default.createElement(icon),
+  label: `nav ${index + 1}`
+}));
+var MainLayout = ({ children, items }) => {
+  var _a, _b;
   const {
     token: { colorBgContainer, borderRadiusLG }
-  } = theme.useToken();
-  return /* @__PURE__ */ jsxs11(Layout2, { children: [
-    /* @__PURE__ */ jsxs11(
+  } = _antd.theme.useToken();
+  const menuItems = items != null ? items : defaultItems;
+  return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Layout, { children: [
+    /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, 
       Sider,
       {
         breakpoint: "lg",
@@ -1217,14 +1280,22 @@ var MainLayout = ({ children }) => {
           console.log(collapsed, type);
         },
         children: [
-          /* @__PURE__ */ jsx21("div", { className: "demo-logo-vertical" }),
-          /* @__PURE__ */ jsx21(Menu2, { theme: "dark", mode: "inline", defaultSelectedKeys: ["4"], items })
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className: "demo-logo-vertical" }),
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+            _antd.Menu,
+            {
+              theme: "dark",
+              mode: "inline",
+              defaultSelectedKeys: [String((_b = menuItems && ((_a = menuItems[0]) == null ? void 0 : _a.key)) != null ? _b : "1")],
+              items: menuItems
+            }
+          )
         ]
       }
     ),
-    /* @__PURE__ */ jsxs11(Layout2, { children: [
-      /* @__PURE__ */ jsx21(Header, { style: { padding: 0, background: colorBgContainer } }),
-      /* @__PURE__ */ jsx21(Content, { style: { margin: "24px 16px 0" }, children: /* @__PURE__ */ jsx21(
+    /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Layout, { children: [
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, Header, { style: { padding: 0, background: colorBgContainer } }),
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, Content, { style: { margin: "24px 16px 0" }, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
         "div",
         {
           style: {
@@ -1233,13 +1304,13 @@ var MainLayout = ({ children }) => {
             background: colorBgContainer,
             borderRadius: borderRadiusLG
           },
-          children: children != null ? children : /* @__PURE__ */ jsxs11("div", { children: [
-            /* @__PURE__ */ jsx21("h3", { children: "Welcome" }),
-            /* @__PURE__ */ jsx21("p", { children: "This is the main content area. Pass children to render dynamic content." })
+          children: children != null ? children : /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { children: [
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h3", { children: "Welcome" }),
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "p", { children: "This is the main content area. Pass children to render dynamic content." })
           ] })
         }
       ) }),
-      /* @__PURE__ */ jsxs11(Footer2, { style: { textAlign: "center" }, children: [
+      /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, Footer2, { style: { textAlign: "center" }, children: [
         "Ant Design \xA9",
         (/* @__PURE__ */ new Date()).getFullYear(),
         " Created by Ant UED"
@@ -1250,12 +1321,12 @@ var MainLayout = ({ children }) => {
 var MainLayout_default = MainLayout;
 
 // src/components/Tables/DataTable/index.tsx
-import React2 from "react";
-import { Table, Input, Tooltip as Tooltip2, Space } from "antd";
-import { jsx as jsx22, jsxs as jsxs12 } from "react/jsx-runtime";
+
+
+
 function useDebouncedValue(value, ms = 250) {
-  const [state, setState] = React2.useState(value);
-  React2.useEffect(() => {
+  const [state, setState] = _react2.default.useState(value);
+  _react2.default.useEffect(() => {
     const id = setTimeout(() => setState(value), ms);
     return () => clearTimeout(id);
   }, [value, ms]);
@@ -1283,13 +1354,13 @@ function defaultColumns() {
       dataIndex: "name",
       key: "name",
       sorter: true,
-      render: (v) => /* @__PURE__ */ jsx22(Tooltip2, { title: v, children: /* @__PURE__ */ jsx22("span", { style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "inline-block", maxWidth: 200 }, children: v }) })
+      render: (v) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Tooltip, { title: v, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "inline-block", maxWidth: 200 }, children: v }) })
     },
     {
       title: "Email",
       dataIndex: "email",
       key: "email",
-      render: (v) => /* @__PURE__ */ jsx22(Tooltip2, { title: v, children: /* @__PURE__ */ jsx22("span", { style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "inline-block", maxWidth: 220 }, children: v }) })
+      render: (v) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Tooltip, { title: v, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "inline-block", maxWidth: 220 }, children: v }) })
     },
     {
       title: "Role",
@@ -1313,9 +1384,9 @@ function DataTable({
   className,
   localeEmptyText
 }) {
-  const [query, setQuery] = React2.useState("");
+  const [query, setQuery] = _react2.default.useState("");
   const debouncedQuery = useDebouncedValue(query, debounceMs);
-  const filtered = React2.useMemo(() => {
+  const filtered = _react2.default.useMemo(() => {
     if (!debouncedQuery) return data;
     const q = String(debouncedQuery).toLowerCase();
     return data.filter(
@@ -1325,16 +1396,16 @@ function DataTable({
       })
     );
   }, [data, debouncedQuery, filterKeys]);
-  const cols = React2.useMemo(() => columns && columns.length > 0 ? columns : defaultColumns(), [columns]);
-  const rowSelection = React2.useMemo(() => {
+  const cols = _react2.default.useMemo(() => columns && columns.length > 0 ? columns : defaultColumns(), [columns]);
+  const rowSelection = _react2.default.useMemo(() => {
     if (!selectable) return void 0;
     return {
       onChange: onSelectionChange
     };
   }, [selectable, onSelectionChange]);
-  return /* @__PURE__ */ jsx22("div", { className, children: /* @__PURE__ */ jsxs12(Space, { direction: "vertical", style: { width: "100%" }, children: [
-    /* @__PURE__ */ jsx22(
-      Input.Search,
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className, children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Space, { direction: "vertical", style: { width: "100%" }, children: [
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      _antd.Input.Search,
       {
         placeholder: "Search...",
         allowClear: true,
@@ -1343,8 +1414,8 @@ function DataTable({
         onChange: (e) => setQuery(e.target.value)
       }
     ),
-    /* @__PURE__ */ jsx22(
-      Table,
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      _antd.Table,
       {
         columns: cols,
         dataSource: filtered,
@@ -1360,11 +1431,11 @@ function DataTable({
 }
 
 // src/components/Header/index.tsx
-import { jsx as jsx23, jsxs as jsxs13 } from "react/jsx-runtime";
+
 var MainHeader = () => {
-  const pathname = usePathname();
-  const [selectedKey, setSelectedKey] = useState("home");
-  const [drawerVisible, setDrawerVisible] = useState(false);
+  const pathname = _navigation.usePathname.call(void 0, );
+  const [selectedKey, setSelectedKey] = _react.useState.call(void 0, "home");
+  const [drawerVisible, setDrawerVisible] = _react.useState.call(void 0, false);
   const menuItems = navItems_default.map((it) => ({
     key: it.key,
     label: it.label,
@@ -1373,51 +1444,51 @@ var MainHeader = () => {
   const handleMenuClick = ({ key }) => {
     setSelectedKey(key);
   };
-  const activeKeyFromPath = React3.useMemo(() => {
+  const activeKeyFromPath = _react2.default.useMemo(() => {
     const match = navItems_default.find((item) => item.path === pathname);
     return match ? match.key : "home";
   }, [pathname]);
-  React3.useEffect(() => {
+  _react2.default.useEffect(() => {
     setSelectedKey(activeKeyFromPath);
   }, [activeKeyFromPath]);
   const showDrawer = () => setDrawerVisible(true);
   const closeDrawer = () => setDrawerVisible(false);
-  return /* @__PURE__ */ jsxs13(HeaderWrapper, { className: "dropout-header relative", children: [
-    /* @__PURE__ */ jsx23(BlueTopBar, { className: "top-bar max-w-[1400px] mx-auto", children: /* @__PURE__ */ jsxs13(BlueTopBarRow, { className: "h-[50px] max-w-[900px] flex items-center ml-auto relative", children: [
-      /* @__PURE__ */ jsx23(Col6, { flex: "auto", children: /* @__PURE__ */ jsx23(WelcomeText, { className: "marquee-inner", children: HEADER_CONTENT.WELCOME_MESSAGE }) }),
-      /* @__PURE__ */ jsx23(Col6, { children: /* @__PURE__ */ jsx23(SocialLinks_default, { className: "hidden md:flex" }) }),
-      /* @__PURE__ */ jsx23(Col6, { className: "book-now-button", children: /* @__PURE__ */ jsx23(BookNowButton, { as: Button3, children: HEADER_CONTENT.BOOK_NOW_TEXT }) })
+  return /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, HeaderWrapper, { className: "dropout-header relative", children: [
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, BlueTopBar, { className: "top-bar max-w-[1400px] mx-auto", children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, BlueTopBarRow, { className: "h-[50px] max-w-[900px] flex items-center ml-auto relative", children: [
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { flex: "auto", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, WelcomeText, { className: "marquee-inner", children: HEADER_CONTENT.WELCOME_MESSAGE }) }),
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, SocialLinks_default, { className: "hidden md:flex" }) }),
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { className: "book-now-button", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, BookNowButton, { as: _antd.Button, children: HEADER_CONTENT.BOOK_NOW_TEXT }) })
     ] }) }),
-    /* @__PURE__ */ jsxs13(MainHeaderWrapper, { className: "max-w-[1400px] mx-auto flex justify-center md:justify-between", children: [
-      /* @__PURE__ */ jsx23(MainHeaderColLeft, { flex: "none", className: "md:pt-8", children: /* @__PURE__ */ jsx23(LogoRow, { href: "/", className: "py-4 block md:p-0", children: /* @__PURE__ */ jsx23(LogoImage, { className: "block", src: HEADER_CONTENT.LOGO_SRC, alt: HEADER_CONTENT.LOGO_ALT }) }) }),
-      /* @__PURE__ */ jsx23(MainHeaderColRight, { className: "flex content-center justify-end", children: /* @__PURE__ */ jsxs13(Space2, { size: 40, children: [
-        /* @__PURE__ */ jsxs13(InfoBlock, { className: "flex", children: [
-          /* @__PURE__ */ jsx23(EnvironmentOutlined, { style: { fontSize: 22, color: "#222" } }),
-          /* @__PURE__ */ jsxs13("div", { children: [
-            /* @__PURE__ */ jsx23(InfoBlockTitle, { children: HEADER_CONTENT.ADDRESS_TITLE }),
-            /* @__PURE__ */ jsx23(InfoBlockSub, { children: HEADER_CONTENT.ADDRESS_SUB })
+    /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, MainHeaderWrapper, { className: "max-w-[1400px] mx-auto flex justify-center md:justify-between", children: [
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, MainHeaderColLeft, { flex: "none", className: "md:pt-8", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, LogoRow, { href: "/", className: "py-4 block md:p-0", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, LogoImage, { className: "block", src: HEADER_CONTENT.LOGO_SRC, alt: HEADER_CONTENT.LOGO_ALT }) }) }),
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, MainHeaderColRight, { className: "flex content-center justify-end", children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Space, { size: 40, children: [
+        /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, InfoBlock, { className: "flex", children: [
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.EnvironmentOutlined, { style: { fontSize: 22, color: "#222" } }),
+          /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { children: [
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, InfoBlockTitle, { children: HEADER_CONTENT.ADDRESS_TITLE }),
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, InfoBlockSub, { children: HEADER_CONTENT.ADDRESS_SUB })
           ] })
         ] }),
-        /* @__PURE__ */ jsxs13(InfoBlock, { className: "flex", children: [
-          /* @__PURE__ */ jsx23(MailOutlined, { style: { fontSize: 22, color: "#222" } }),
-          /* @__PURE__ */ jsxs13("div", { children: [
-            /* @__PURE__ */ jsx23(InfoBlockTitle, { children: HEADER_CONTENT.EMAIL_TITLE }),
-            /* @__PURE__ */ jsx23(InfoBlockSub, { children: HEADER_CONTENT.EMAIL_SUB })
+        /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, InfoBlock, { className: "flex", children: [
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.MailOutlined, { style: { fontSize: 22, color: "#222" } }),
+          /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { children: [
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, InfoBlockTitle, { children: HEADER_CONTENT.EMAIL_TITLE }),
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, InfoBlockSub, { children: HEADER_CONTENT.EMAIL_SUB })
           ] })
         ] }),
-        /* @__PURE__ */ jsxs13(InfoBlock, { className: "flex", children: [
-          /* @__PURE__ */ jsx23(ClockCircleOutlined, { style: { fontSize: 22, color: "#222" } }),
-          /* @__PURE__ */ jsxs13("div", { children: [
-            /* @__PURE__ */ jsx23(InfoBlockTitle, { children: HEADER_CONTENT.WORKING_HOURS_TITLE }),
-            /* @__PURE__ */ jsx23(InfoBlockSub, { children: HEADER_CONTENT.WORKING_HOURS_SUB })
+        /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, InfoBlock, { className: "flex", children: [
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.ClockCircleOutlined, { style: { fontSize: 22, color: "#222" } }),
+          /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { children: [
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, InfoBlockTitle, { children: HEADER_CONTENT.WORKING_HOURS_TITLE }),
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, InfoBlockSub, { children: HEADER_CONTENT.WORKING_HOURS_SUB })
           ] })
         ] })
       ] }) })
     ] }),
-    /* @__PURE__ */ jsxs13(BlackNavBarRow, { className: "max-w-[1400px] mx-auto", children: [
-      /* @__PURE__ */ jsxs13("div", { className: "nav-row h-[50px] flex content-center relative max-w-[900px] ml-auto", children: [
-        /* @__PURE__ */ jsx23(Button3, { className: "menu-icon md:hidden text-blue-950 h-auto", type: "text", icon: /* @__PURE__ */ jsx23(MenuOutlined, {}), onClick: showDrawer }),
-        /* @__PURE__ */ jsx23(Col6, { flex: "auto", className: "hidden md:block", children: /* @__PURE__ */ jsx23(
+    /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, BlackNavBarRow, { className: "max-w-[1400px] mx-auto", children: [
+      /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "nav-row h-[50px] flex content-center relative max-w-[900px] ml-auto", children: [
+        /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Button, { className: "menu-icon md:hidden text-blue-950 h-auto", type: "text", icon: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.MenuOutlined, {}), onClick: showDrawer }),
+        /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Col, { flex: "auto", className: "hidden md:block", children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
           MenuStyled,
           {
             mode: "horizontal",
@@ -1427,24 +1498,24 @@ var MainHeader = () => {
             onClick: ({ key }) => setSelectedKey(key)
           }
         ) }),
-        /* @__PURE__ */ jsxs13(InfoBlock, { className: "flex ml-auto md:hidden", children: [
-          /* @__PURE__ */ jsx23(ClockCircleOutlined, { style: { fontSize: 18, color: "#888" } }),
-          /* @__PURE__ */ jsx23(InfoBlockSub, { children: HEADER_CONTENT.WORKING_HOURS_SUB })
+        /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, InfoBlock, { className: "flex ml-auto md:hidden", children: [
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _icons.ClockCircleOutlined, { style: { fontSize: 18, color: "#888" } }),
+          /* @__PURE__ */ _jsxruntime.jsx.call(void 0, InfoBlockSub, { children: HEADER_CONTENT.WORKING_HOURS_SUB })
         ] }),
-        /* @__PURE__ */ jsx23(SocialLinks_default, { className: "flex pr-4 md:p-0 ml-auto md:m-0 md:hidden", color: "#fff" })
+        /* @__PURE__ */ _jsxruntime.jsx.call(void 0, SocialLinks_default, { className: "flex pr-4 md:p-0 ml-auto md:m-0 md:hidden", color: "#fff" })
       ] }),
-      /* @__PURE__ */ jsx23(
-        Drawer,
+      /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+        _antd.Drawer,
         {
-          title: /* @__PURE__ */ jsx23(header_default, {}),
+          title: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, header_default, {}),
           placement: "left",
           onClose: closeDrawer,
           closable: { placement: "end" },
           open: drawerVisible,
           className: "md:hidden",
-          children: /* @__PURE__ */ jsxs13("div", { className: "flex flex-col h-full justify-between", children: [
-            /* @__PURE__ */ jsx23(
-              Menu3,
+          children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "flex flex-col h-full justify-between", children: [
+            /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+              _antd.Menu,
               {
                 mode: "vertical",
                 selectedKeys: [selectedKey],
@@ -1455,25 +1526,25 @@ var MainHeader = () => {
                 }
               }
             ),
-            /* @__PURE__ */ jsxs13("div", { children: [
-              /* @__PURE__ */ jsx23("h3", { className: "relative uppercase", children: "CONTECT INFO " }),
-              /* @__PURE__ */ jsxs13("address", { children: [
-                /* @__PURE__ */ jsxs13("div", { className: "address-line mb-4", children: [
-                  /* @__PURE__ */ jsx23("span", { className: "address-label secondary-color barlow-medium block", children: "Phone : " }),
-                  /* @__PURE__ */ jsx23("a", { className: "primary-color", href: "callto:+918727073012", children: "+91 8727073012 " })
+            /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { children: [
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "h3", { className: "relative uppercase", children: "CONTECT INFO " }),
+              /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "address", { children: [
+                /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "address-line mb-4", children: [
+                  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { className: "address-label secondary-color barlow-medium block", children: "Phone : " }),
+                  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "a", { className: "primary-color", href: "callto:+918727073012", children: "+91 8727073012 " })
                 ] }),
-                /* @__PURE__ */ jsxs13("div", { className: "address-line mb-4", children: [
-                  /* @__PURE__ */ jsx23("span", { className: "address-label secondary-color barlow-medium block", children: "Email : " }),
-                  /* @__PURE__ */ jsx23("a", { className: "primary-color", href: "mailto:dropoutcarcare@gmail.com", children: "dropoutcarcare@gmail.com" })
+                /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "address-line mb-4", children: [
+                  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { className: "address-label secondary-color barlow-medium block", children: "Email : " }),
+                  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "a", { className: "primary-color", href: "mailto:dropoutcarcare@gmail.com", children: "dropoutcarcare@gmail.com" })
                 ] }),
-                /* @__PURE__ */ jsxs13("div", { className: "address-line mb-4", children: [
-                  /* @__PURE__ */ jsx23("span", { className: "address-label secondary-color barlow-medium block", children: "Address : " }),
+                /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, "div", { className: "address-line mb-4", children: [
+                  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { className: "address-label secondary-color barlow-medium block", children: "Address : " }),
                   "Ithera Market, Opp- Gaur world smart street,",
-                  /* @__PURE__ */ jsx23("br", {}),
+                  /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "br", {}),
                   " Grater Noida West, Uttar Pradesh, India"
                 ] })
               ] }),
-              /* @__PURE__ */ jsx23(Map_default, {})
+              /* @__PURE__ */ _jsxruntime.jsx.call(void 0, Map_default, {})
             ] })
           ] })
         }
@@ -1483,27 +1554,29 @@ var MainHeader = () => {
 };
 var Header_default = MainHeader;
 
-export {
-  AlertBanner_default,
-  Header_default,
-  Banner_default,
-  Slider_default,
-  Footer_default,
-  header_default,
-  footer_default,
-  SocialLinks_default,
-  Tabs_default,
-  BaseCard_default,
-  WhatsAppChat_default,
-  PageBanner_default,
-  InformationCard_default,
-  Section_default,
-  DetailedCard_default,
-  InstagramFeed_default,
-  Map_default,
-  Video_default,
-  Gallery_default,
-  Navigation_default,
-  MainLayout_default,
-  DataTable
-};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exports.AlertBanner_default = AlertBanner_default; exports.Header_default = Header_default; exports.Banner_default = Banner_default; exports.Slider_default = Slider_default; exports.Footer_default = Footer_default; exports.header_default = header_default; exports.footer_default = footer_default; exports.SocialLinks_default = SocialLinks_default; exports.Tabs_default = Tabs_default; exports.BaseCard_default = BaseCard_default; exports.WhatsAppChat_default = WhatsAppChat_default; exports.PageBanner_default = PageBanner_default; exports.InformationCard_default = InformationCard_default; exports.Section_default = Section_default; exports.TextInput_default = TextInput_default; exports.Button_default = Button_default; exports.DetailedCard_default = DetailedCard_default; exports.InstagramFeed_default = InstagramFeed_default; exports.Map_default = Map_default; exports.Video_default = Video_default; exports.Gallery_default = Gallery_default; exports.Navigation_default = Navigation_default; exports.MainLayout_default = MainLayout_default; exports.DataTable = DataTable;

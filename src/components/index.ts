@@ -12,6 +12,8 @@ export { default as WhatsAppChat } from './WhatsAppChat';
 export { default as PageBanner } from './PageBanner';
 export { default as InformationCard } from './Cards/InformationCard';
 export { default as Section } from "./Section";
+export { default as TextInput } from "./Form/TextInput";
+export { default as Button } from "./Button";
 export { default as DetailedCard } from "./Cards/DetailedCard";
 export { default as InstagramFeed } from "./InstagramFeed";
 export { default as Map } from "./Map";

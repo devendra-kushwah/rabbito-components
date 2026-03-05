@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import * as react_jsx_runtime from 'react/jsx-runtime';
+import { InputProps, Input, ButtonProps, MenuProps } from 'antd';
 import { ColumnsType, TableProps } from 'antd/es/table';
 
 interface BannerProps$1 {
@@ -106,6 +107,30 @@ interface SectionProps {
 }
 declare const Section: React.FC<SectionProps>;
 
+type TextInputProps = InputProps & {
+    /** Optional wrapper class name around the input */
+    wrapperClassName?: string;
+    /** Optional label shown above the input */
+    label?: React.ReactNode;
+    /** If true, renders the label (default true) */
+    showLabel?: boolean;
+};
+type CompoundedComponent = React.ForwardRefExoticComponent<React.PropsWithoutRef<TextInputProps> & React.RefAttributes<HTMLInputElement>> & {
+    TextArea: typeof Input.TextArea;
+    Search: typeof Input.Search;
+    Password: typeof Input.Password;
+};
+declare const TextInput: CompoundedComponent;
+
+type ButtonColor = ButtonProps['type'] | 'primary' | 'default';
+type ButtonVariant = 'solid' | 'outline' | 'text' | (string & {});
+declare const Button: React.ForwardRefExoticComponent<Omit<ButtonProps, "type"> & {
+    /** color maps to AntD button type (primary, dashed, link, text, ghost, default) */
+    color?: ButtonColor;
+    /** visual variant */
+    variant?: ButtonVariant;
+} & React.RefAttributes<HTMLButtonElement>>;
+
 interface DetailedCardProps {
     title?: string;
     subTitle?: string;
@@ -207,6 +232,7 @@ declare const Navigation: React.FC;
 
 interface MainLayoutProps {
     children?: React.ReactNode;
+    items?: MenuProps['items'];
 }
 declare const MainLayout: React.FC<MainLayoutProps>;
 
@@ -228,4 +254,4 @@ type DataTableProps<T extends Record<string, any>> = {
 };
 declare function DataTable<T extends Record<string, any>>({ data, columns, rowKey, loading, pageSize, pagination, onChange, filterKeys, debounceMs, selectable, onSelectionChange, className, localeEmptyText, }: DataTableProps<T>): react_jsx_runtime.JSX.Element;
 
-export { AlertBanner, Banner, BaseCard, DataTable, DetailedCard, Footer, HeaderLogo as FooterLogo, Gallery, HeaderLogo$1 as HeaderLogo, InformationCard, InstagramFeed, MainHeader, MainLayout, Map, Navigation, PageBanner, Section, Slider, SocialLinks, SharedTabs as Tabs, Video, WhatsAppChat };
+export { AlertBanner, Banner, BaseCard, Button, DataTable, DetailedCard, Footer, HeaderLogo as FooterLogo, Gallery, HeaderLogo$1 as HeaderLogo, InformationCard, InstagramFeed, MainHeader, MainLayout, Map, Navigation, PageBanner, Section, Slider, SocialLinks, SharedTabs as Tabs, TextInput, Video, WhatsAppChat };
