@@ -2,6 +2,7 @@ import {
   AlertBanner_default,
   Banner_default,
   BaseCard_default,
+  DataTable,
   DetailedCard_default,
   Footer_default,
   Gallery_default,
@@ -20,11 +21,12 @@ import {
   WhatsAppChat_default,
   footer_default,
   header_default
-} from "./chunk-ELXVPUF3.mjs";
+} from "./chunk-BN2HLSJN.mjs";
 export {
   AlertBanner_default as AlertBanner,
   Banner_default as Banner,
   BaseCard_default as BaseCard,
+  DataTable,
   DetailedCard_default as DetailedCard,
   Footer_default as Footer,
   footer_default as FooterLogo,

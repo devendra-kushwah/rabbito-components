@@ -20,7 +20,8 @@
 
 
 
-var _chunkP646OVNVjs = require('./chunk-P646OVNV.js');
+
+var _chunkQKLZ373Wjs = require('./chunk-QKLZ373W.js');
 
 
 
@@ -43,4 +44,5 @@ var _chunkP646OVNVjs = require('./chunk-P646OVNV.js');
 
 
 
-exports.AlertBanner = _chunkP646OVNVjs.AlertBanner_default; exports.Banner = _chunkP646OVNVjs.Banner_default; exports.BaseCard = _chunkP646OVNVjs.BaseCard_default; exports.DetailedCard = _chunkP646OVNVjs.DetailedCard_default; exports.Footer = _chunkP646OVNVjs.Footer_default; exports.FooterLogo = _chunkP646OVNVjs.footer_default; exports.Gallery = _chunkP646OVNVjs.Gallery_default; exports.HeaderLogo = _chunkP646OVNVjs.header_default; exports.InformationCard = _chunkP646OVNVjs.InformationCard_default; exports.InstagramFeed = _chunkP646OVNVjs.InstagramFeed_default; exports.MainHeader = _chunkP646OVNVjs.Header_default; exports.MainLayout = _chunkP646OVNVjs.MainLayout_default; exports.Map = _chunkP646OVNVjs.Map_default; exports.Navigation = _chunkP646OVNVjs.Navigation_default; exports.PageBanner = _chunkP646OVNVjs.PageBanner_default; exports.Section = _chunkP646OVNVjs.Section_default; exports.Slider = _chunkP646OVNVjs.Slider_default; exports.SocialLinks = _chunkP646OVNVjs.SocialLinks_default; exports.Tabs = _chunkP646OVNVjs.Tabs_default; exports.Video = _chunkP646OVNVjs.Video_default; exports.WhatsAppChat = _chunkP646OVNVjs.WhatsAppChat_default;
+
+exports.AlertBanner = _chunkQKLZ373Wjs.AlertBanner_default; exports.Banner = _chunkQKLZ373Wjs.Banner_default; exports.BaseCard = _chunkQKLZ373Wjs.BaseCard_default; exports.DataTable = _chunkQKLZ373Wjs.DataTable; exports.DetailedCard = _chunkQKLZ373Wjs.DetailedCard_default; exports.Footer = _chunkQKLZ373Wjs.Footer_default; exports.FooterLogo = _chunkQKLZ373Wjs.footer_default; exports.Gallery = _chunkQKLZ373Wjs.Gallery_default; exports.HeaderLogo = _chunkQKLZ373Wjs.header_default; exports.InformationCard = _chunkQKLZ373Wjs.InformationCard_default; exports.InstagramFeed = _chunkQKLZ373Wjs.InstagramFeed_default; exports.MainHeader = _chunkQKLZ373Wjs.Header_default; exports.MainLayout = _chunkQKLZ373Wjs.MainLayout_default; exports.Map = _chunkQKLZ373Wjs.Map_default; exports.Navigation = _chunkQKLZ373Wjs.Navigation_default; exports.PageBanner = _chunkQKLZ373Wjs.PageBanner_default; exports.Section = _chunkQKLZ373Wjs.Section_default; exports.Slider = _chunkQKLZ373Wjs.Slider_default; exports.SocialLinks = _chunkQKLZ373Wjs.SocialLinks_default; exports.Tabs = _chunkQKLZ373Wjs.Tabs_default; exports.Video = _chunkQKLZ373Wjs.Video_default; exports.WhatsAppChat = _chunkQKLZ373Wjs.WhatsAppChat_default;

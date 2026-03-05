@@ -1249,6 +1249,116 @@ var MainLayout = ({ children }) => {
 };
 var MainLayout_default = MainLayout;
 
+// src/components/Tables/DataTable/index.tsx
+
+
+
+function useDebouncedValue(value, ms = 250) {
+  const [state, setState] = _react2.default.useState(value);
+  _react2.default.useEffect(() => {
+    const id = setTimeout(() => setState(value), ms);
+    return () => clearTimeout(id);
+  }, [value, ms]);
+  return state;
+}
+function defaultColumns() {
+  return [
+    {
+      title: "ID",
+      dataIndex: "id",
+      key: "id",
+      sorter: (a, b) => String(a.id) > String(b.id) ? 1 : -1,
+      width: 80
+    },
+    {
+      title: "Created",
+      dataIndex: "createdAt",
+      key: "createdAt",
+      sorter: true,
+      render: (v) => v ? new Date(v).toLocaleDateString() : "-",
+      width: 140
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+      sorter: true,
+      render: (v) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Tooltip, { title: v, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "inline-block", maxWidth: 200 }, children: v }) })
+    },
+    {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
+      render: (v) => /* @__PURE__ */ _jsxruntime.jsx.call(void 0, _antd.Tooltip, { title: v, children: /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "span", { style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "inline-block", maxWidth: 220 }, children: v }) })
+    },
+    {
+      title: "Role",
+      dataIndex: "role",
+      key: "role"
+    }
+  ];
+}
+function DataTable({
+  data,
+  columns,
+  rowKey = "id",
+  loading = false,
+  pageSize = 10,
+  pagination = { pageSize },
+  onChange,
+  filterKeys = ["name", "email", "role"],
+  debounceMs = 250,
+  selectable = false,
+  onSelectionChange,
+  className,
+  localeEmptyText
+}) {
+  const [query, setQuery] = _react2.default.useState("");
+  const debouncedQuery = useDebouncedValue(query, debounceMs);
+  const filtered = _react2.default.useMemo(() => {
+    if (!debouncedQuery) return data;
+    const q = String(debouncedQuery).toLowerCase();
+    return data.filter(
+      (row) => filterKeys.some((k) => {
+        const v = row[k];
+        return v != null && String(v).toLowerCase().includes(q);
+      })
+    );
+  }, [data, debouncedQuery, filterKeys]);
+  const cols = _react2.default.useMemo(() => columns && columns.length > 0 ? columns : defaultColumns(), [columns]);
+  const rowSelection = _react2.default.useMemo(() => {
+    if (!selectable) return void 0;
+    return {
+      onChange: onSelectionChange
+    };
+  }, [selectable, onSelectionChange]);
+  return /* @__PURE__ */ _jsxruntime.jsx.call(void 0, "div", { className, children: /* @__PURE__ */ _jsxruntime.jsxs.call(void 0, _antd.Space, { direction: "vertical", style: { width: "100%" }, children: [
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      _antd.Input.Search,
+      {
+        placeholder: "Search...",
+        allowClear: true,
+        enterButton: false,
+        "aria-label": "Data table global search",
+        onChange: (e) => setQuery(e.target.value)
+      }
+    ),
+    /* @__PURE__ */ _jsxruntime.jsx.call(void 0, 
+      _antd.Table,
+      {
+        columns: cols,
+        dataSource: filtered,
+        rowKey,
+        loading,
+        pagination,
+        onChange,
+        rowSelection,
+        locale: localeEmptyText ? { emptyText: localeEmptyText } : void 0
+      }
+    )
+  ] }) });
+}
+
 // src/components/Header/index.tsx
 
 var MainHeader = () => {
@@ -1395,4 +1505,5 @@ var Header_default = MainHeader;
 
 
 
-exports.AlertBanner_default = AlertBanner_default; exports.Header_default = Header_default; exports.Banner_default = Banner_default; exports.Slider_default = Slider_default; exports.Footer_default = Footer_default; exports.header_default = header_default; exports.footer_default = footer_default; exports.SocialLinks_default = SocialLinks_default; exports.Tabs_default = Tabs_default; exports.BaseCard_default = BaseCard_default; exports.WhatsAppChat_default = WhatsAppChat_default; exports.PageBanner_default = PageBanner_default; exports.InformationCard_default = InformationCard_default; exports.Section_default = Section_default; exports.DetailedCard_default = DetailedCard_default; exports.InstagramFeed_default = InstagramFeed_default; exports.Map_default = Map_default; exports.Video_default = Video_default; exports.Gallery_default = Gallery_default; exports.Navigation_default = Navigation_default; exports.MainLayout_default = MainLayout_default;
+
+exports.AlertBanner_default = AlertBanner_default; exports.Header_default = Header_default; exports.Banner_default = Banner_default; exports.Slider_default = Slider_default; exports.Footer_default = Footer_default; exports.header_default = header_default; exports.footer_default = footer_default; exports.SocialLinks_default = SocialLinks_default; exports.Tabs_default = Tabs_default; exports.BaseCard_default = BaseCard_default; exports.WhatsAppChat_default = WhatsAppChat_default; exports.PageBanner_default = PageBanner_default; exports.InformationCard_default = InformationCard_default; exports.Section_default = Section_default; exports.DetailedCard_default = DetailedCard_default; exports.InstagramFeed_default = InstagramFeed_default; exports.Map_default = Map_default; exports.Video_default = Video_default; exports.Gallery_default = Gallery_default; exports.Navigation_default = Navigation_default; exports.MainLayout_default = MainLayout_default; exports.DataTable = DataTable;

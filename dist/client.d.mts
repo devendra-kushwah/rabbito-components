@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import * as react_jsx_runtime from 'react/jsx-runtime';
+import { ColumnsType, TableProps } from 'antd/es/table';
 
 interface BannerProps$1 {
     message: string;
@@ -209,4 +210,22 @@ interface MainLayoutProps {
 }
 declare const MainLayout: React.FC<MainLayoutProps>;
 
-export { AlertBanner, Banner, BaseCard, DetailedCard, Footer, HeaderLogo as FooterLogo, Gallery, HeaderLogo$1 as HeaderLogo, InformationCard, InstagramFeed, MainHeader, MainLayout, Map, Navigation, PageBanner, Section, Slider, SocialLinks, SharedTabs as Tabs, Video, WhatsAppChat };
+type Key = React.Key;
+type DataTableProps<T extends Record<string, any>> = {
+    data: T[];
+    columns?: ColumnsType<T>;
+    rowKey?: string | ((record: T) => Key);
+    loading?: boolean;
+    pageSize?: number;
+    pagination?: TableProps<T>['pagination'];
+    onChange?: TableProps<T>['onChange'];
+    filterKeys?: (keyof T)[];
+    debounceMs?: number;
+    selectable?: boolean;
+    onSelectionChange?: (selectedRowKeys: Key[], selectedRows: T[]) => void;
+    className?: string;
+    localeEmptyText?: React.ReactNode;
+};
+declare function DataTable<T extends Record<string, any>>({ data, columns, rowKey, loading, pageSize, pagination, onChange, filterKeys, debounceMs, selectable, onSelectionChange, className, localeEmptyText, }: DataTableProps<T>): react_jsx_runtime.JSX.Element;
+
+export { AlertBanner, Banner, BaseCard, DataTable, DetailedCard, Footer, HeaderLogo as FooterLogo, Gallery, HeaderLogo$1 as HeaderLogo, InformationCard, InstagramFeed, MainHeader, MainLayout, Map, Navigation, PageBanner, Section, Slider, SocialLinks, SharedTabs as Tabs, Video, WhatsAppChat };
